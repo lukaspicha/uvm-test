@@ -1,0 +1,56 @@
+
+
+{block content}
+	<div class="ui segment">
+		
+		{form contactForm class => "ui form"}
+			<h2 class="ui dividing header">Nová poptávka</h2>
+			<div n:foreach="$form->errors as $error" class="ui red message">
+				{$error}
+			</div>
+			<div class="two fields">
+				<div class="field">
+					{label name/}
+					{input name}
+				</div>
+				<div class="field">
+					{label surname/}
+					{input surname}
+				</div>
+			</div>
+			<div class="two fields">
+				<div class="field">
+					{label mail/}
+					{input mail}
+				</div>
+				<div class="field">
+					{label phone/}
+					{input phone}
+				</div>
+			</div>
+			<div class "ui field">
+				{label desc/}
+				{input desc}
+			</div>
+			<div class="ui divider"></div>
+			<div class="ui field">
+				{input send class => "ui teal button"}
+			</div>
+	{/form}
+	</div>
+
+	<div class="ui segment">
+		{form parserForm class => "ui form"}
+			<h2 class="ui dividing header">Import xml</h2>
+			<div class "ui field">
+				{label file/}
+				{input file}
+			</div>
+			<div class="ui divider"></div>
+			<div class="ui field">
+				{input send class => "ui teal button"}
+			</div>
+		{/form}
+	</div>
+
+{/block}
